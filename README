@@ -1,0 +1,26 @@
+# Text Analyzer / Geffen Almog
+
+## Extensions:
+
+* Task 8. Extension: Checking Fixed-Length Paths Between People - Finds if indirect connection exists between characters. (Connected trough mutual connection of a specific length.)
+This task was implemented using weighted graph and Depth-First Search (DFS) with a stack for backtracking, efficiently finding paths of fixed lengths between characters.
+
+* Task 9. Extension: Grouping Sentences by Shared Words - Group sentences that have at-least given amount of words in common.
+This task was implemented using a weighted graph structure to group sentences based on shared words, with the graph edges representing the strength of the connections between sentences.
+
+
+
+## Design
+
+I  structured the project following Object-Oriented Programming (OOP) principles,
+with a focus on the Single Responsibility Principle (SRP).
+Classes like Sentences_Processor, Names_Processor, Sentences_Analyzer, and Characters_Analyzer
+are each responsible for one task, making the system maintainable and flexible.
+This modular design allows easy extension without affecting existing functionality.
+
+The PreProcessor_Handler manages preprocessed data,
+while the Tasks_Runner handles task execution, ensuring clear separation of concerns.
+
+I implemented a generic Graph class using a weighted graph to represent relationships.
+This structure supports threshold-based analysis and is scalable with a dictionary-based node storage for fast access.
+Depth-First Search (DFS) is used for efficient pathfinding, ensuring performance as the project grows.
